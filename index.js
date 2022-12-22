@@ -64,5 +64,23 @@ window.addEventListener('load', async () => {
             }
         })
     })
+    document.getElementById('mode').addEventListener('click', () => {
+        if (mode == 'light') {
+            mode = 'dark'
+            document.getElementById('nav').classList.add('bg-dark')
+            document.getElementById('nav').classList.add('navbar-dark')
+            document.getElementsByTagName('body')[0].style.backgroundColor = '#343a40'
+            document.getElementById('label').style.color = 'white'
+            document.getElementById('label').innerText = `${mode} mode `
+        }else{
+            mode = 'light'
+            document.getElementById('nav').classList.remove('bg-dark')
+            document.getElementById('nav').classList.remove('navbar-dark')
+            document.getElementsByTagName('body')[0].style.backgroundColor = 'white'
+            document.getElementById('label').style.color = 'black'  
+            document.getElementById('label').innerText = `${mode} mode `
+        }
+
+    })
     
 })
